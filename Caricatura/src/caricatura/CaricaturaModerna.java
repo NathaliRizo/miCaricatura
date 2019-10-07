@@ -1,13 +1,15 @@
 
 package caricatura;
 
+import java.util.Date;
+
 public class CaricaturaModerna extends Caricatura {
     private String metodoDeAnimacion;
     private int calificacion;
     private Boolean top10;
 
-    public CaricaturaModerna(String nombre, boolean tieneRopa, int numeroDeVidas) {
-        super(nombre, tieneRopa, numeroDeVidas);
+    public CaricaturaModerna(String nombre, boolean tieneRopa, int numeroDeVidas, Date fechaDeCreacion, String especie) {
+        super(nombre, tieneRopa, numeroDeVidas, fechaDeCreacion, especie);
     }
 
     public String getMetodoDeAnimacion() {

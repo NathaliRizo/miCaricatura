@@ -7,23 +7,28 @@ public class Caricatura {
     private String nombre;
     private boolean tieneRopa;
     private int numeroDeVidas;
+    private Date fechaDeCreacion;
+    private String especie;
 
-    public Caricatura(String nombre, boolean tieneRopa, int numeroDeVidas) {
+    public Caricatura(String nombre, boolean tieneRopa, int numeroDeVidas, Date fechaDeCreacion, String especie) {
         this.nombre = nombre;
         this.tieneRopa = tieneRopa;
         this.numeroDeVidas = numeroDeVidas;
+        this.fechaDeCreacion = fechaDeCreacion;
+        this.especie = especie;
     }
+
         
     public void herir() {
         this.numeroDeVidas = 0;
     }
 
-    public void herir(int Vidas) {
-        if (Vidas <= this.numeroDeVidas) {
+    public void herir(int vidas) {
+        if (vidas < this.numeroDeVidas) {
             System.out.println("Lastimaron a tu personaje!");
+            this.numeroDeVidas = vidas;
         } else {
-            this.numeroDeVidas = Vidas;
-            System.out.println("Vidas restantes: " + String.valueOf(Vidas));
+            System.out.println("El personaje no ha sido herido");
         }
 
     }
