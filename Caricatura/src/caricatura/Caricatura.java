@@ -2,6 +2,10 @@ package caricatura;
 
 import java.util.Date;
 
+/**
+ *
+ * @author Alumno
+ */
 public class Caricatura {
 
     private String nombre;
